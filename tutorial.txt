@@ -1,0 +1,65 @@
+// Day to day code
+
+    user.email = "liberarik@gmail.com"
+    user.save()
+
+// Behind the scenes
+
+    MMMMMMMMMM....
+    0123456789....
+
+    memory[4] = 2
+
+    Result: MMM2MMMMMM....
+
+// In a turing machine we have a tabe, like a magnetic cassete tape
+
+    ...BBBBBBBBBBBBBBBBBBBBBBBBBB...
+          ^
+    B = Blank
+    ^ = Head for observe and change
+
+    // Instructions can simply be 
+
+    right
+    right
+    store 2
+    etc.
+
+    // Just like the code above is not real, these are not realt assembly instructions
+
+// Let's build an X_B machine: Simple cassete with just 2 cells, wrtiing X on the first cell infinetely
+
+  Example:
+
+  BB => XB => BB
+  ^     ^     ^  
+
+  meaning:
+
+  B -> X
+  X -> B
+
+  // We must add 2 complications:
+
+      // 1) Must move the pointer:
+
+      B -> X, R
+      B -> B, L
+      X -> B, R
+      B -> B, L
+
+      // 2) Turing machines are "triggered" based on what they see on the left so in our case we have 3 ambiguius rules starting with B
+
+      // Let's introduce a "state symbol"
+
+      s1: BB
+          ^
+
+      B, s1 -> X, R, s2
+      B, s2 -> B, L, s3
+      X, s3 -> B, R, s4
+      B, s4 -> B, L, s1
+
+  // Now what is this thing above? A program!!
+  // Let's convert to an actual, runnable program
