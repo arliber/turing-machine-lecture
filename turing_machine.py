@@ -21,8 +21,8 @@ def simulate(instructions):
 
     print(tape)
 
-    # print(state.rjust(4) + ': ' + ''.join(tape))
-    # print('      ' + ' ' * head + '^')
+    print(state.rjust(4) + ': ' + ''.join(tape))
+    print('      ' + ' ' * head + '^')
 
     key = (tape[head], state)
     new_symbol, head_direction, new_state = instructions[key] # Which is exactly what we need to move

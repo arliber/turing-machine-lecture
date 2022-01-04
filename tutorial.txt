@@ -1,18 +1,20 @@
 // Day to day code
 
-    user.email = "liberarik@gmail.com"
+    user.website = "liberarik.xyz"
     user.save()
 
 // Behind the scenes
 
-    MMMMMMMMMM....
-    0123456789....
+    Memory:
+        MMMMMMMMMM....
+        0123456789....
+
 
     memory[4] = 2
 
     Result: MMM2MMMMMM....
 
-// In a turing machine we have a tabe, like a magnetic cassete tape
+// In a turing machine we have a tape, like a magnetic cassete tape
 
     ...BBBBBBBBBBBBBBBBBBBBBBBBBB...
           ^
